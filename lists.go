@@ -14,5 +14,14 @@ func main() {
 	fmt.Println(prices[2])
 
 	slice := prices[1:3]
+	featuredPrices := prices[1:]
+	highlightedPrices := featuredPrices[:1]
+	fmt.Println(featuredPrices)
+	fmt.Println(len(featuredPrices))
+	fmt.Println(cap(featuredPrices))
+	fmt.Println(highlightedPrices)
 	fmt.Println(slice)
+
+	highlightedPrices = highlightedPrices[:3]
+	fmt.Println(highlightedPrices) // this is a weird behavior but it works like this in go.
 }
